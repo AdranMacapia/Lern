@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Don Bosco Technical Institute Makati   - School Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet" href="styles.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">
+        <img src="/assets/logo.png" alt="Logo" />
+        Learning Education Resource Network
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <ul class="social-icons">
+        <li><a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+    </nav>
+
+    <header class="school-header">
+      <h1>St. Paul College of Pasay</h1>
+      <p>Meliora Eligo</p>
+    </header>
+
+    <main class="school-content">
+      <div class="school-image">
+        <img
+          src="/assets/tcu1.jpg"
+          alt="Taguig City University Campus 1"
+          class="active"
+        />
+        <img src="/assets/tcu2.jpg" alt="Taguig City University Campus 2" />
+        <img src="/assets/tcu3.jpg" alt="Taguig City University Campus 3" />
+        <img src="/assets/tcu4.jpg" alt="Taguig City University Campus 4" />
+        <div class="image-nav"></div>
+      </div>
+      <div class="school-info">
+        <h2>St. Paul College of Pasay</h2>
+        <p>
+          St. Paul College of Pasay (SPCP) is a private Catholic educational institution located in Pasay City, Philippines. Founded by the Sisters of St. Paul of Chartres, SPCP is part of a global network of Paulinian institutions dedicated to providing quality education rooted in Catholic values. The school offers programs from basic education to tertiary levels, aiming to develop students into well-rounded individuals committed to academic excellence, moral integrity, and social responsibility.
+        </p>
+
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab-button active" onclick="openTab(event, 'rules')">
+              School Rules
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'courses')">
+              Offered Courses
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'contact')">
+              Contact
+            </button>
+          </div>
+
+          <div id="rules" class="tab-content active">
+            <ul>
+              <li>
+                <b>Vision - Mission:</b>St. Paul College of Pasay is a nurturing, responsive, and innovative Catholic institution for the young. We form an educative-pastoral community of lifelong learners, champions of integral ecology, and agents of social transformation. We provide holistic Catholic education that forms the young, especially the underprivileged, to become good Christians and upright citizens.
+              </li>
+              <li>
+                <b>Our Core Values:</b> Excellence – Integrity – Innovation - Social Responsibility
+
+              </li>
+            </ul>
+          </div>
+          <div id="courses" class="tab-content">
+            <h3>Available Strand</h3>
+            <h4>Undergraduate Programs:</h4>
+            <ul>
+              <li>Bachelor of Science in Business Administration</li>
+              <li>Bachelor of Science in Information Technology</li>
+              <li>Bachelor of Science in Tourism Management</li>
+              <li>Bachelor of Science in Hospitality Management</li>
+              <li>Bachelor of Elementary Education</li>
+              <li>Bachelor of Secondary Education</li>
+              <li>Bachelor of Science in Psychology</li>
+            </ul>	
+          </div>
+        </div>
+        <div id="contact" class="tab-content">
+          <h3>Contact Information</h3>
+          <p><b>Address:</b> St. Paul College of Pasay
+James Street, Villamor Air Base
+Pasay City, Philippines
+            </p>
+          <p><b>Phone:</b> (02) 8852-3726
+            </p>
+          <p><b>Email:</b> info@spcp.edu.ph
+            </p>
+          <p>
+            <b>Website:</b>
+            <a
+              href="http://www.spcp.edu.ph/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >www.spcp.edu.ph</a
+            >
+          </p>
+        </div>
+
+        <a href="Pasay.html" class="back-link">Back to Gallery</a>
+      </div>
+    </main>
+
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabContent, tabButtons;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+        tabButtons = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tabButtons.length; i++) {
+          tabButtons[i].className = tabButtons[i].className.replace(
+            " active",
+            ""
+          );
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Image slider functionality
+      const images = document.querySelectorAll(".school-image img");
+      const imageNav = document.querySelector(".image-nav");
+      let currentImage = 0;
+
+      // Create navigation buttons
+      images.forEach((_, index) => {
+        const button = document.createElement("button");
+        button.addEventListener("click", () => showImage(index));
+        imageNav.appendChild(button);
+      });
+
+      const navButtons = imageNav.querySelectorAll("button");
+
+      function showImage(index) {
+        images[currentImage].classList.remove("active");
+        navButtons[currentImage].classList.remove("active");
+        currentImage = index;
+        images[currentImage].classList.add("active");
+        navButtons[currentImage].classList.add("active");
+      }
+
+      function nextImage() {
+        showImage((currentImage + 1) % images.length);
+      }
+
+      // Initialize
+      showImage(0);
+      setInterval(nextImage, 5000); // Change image every 5 seconds
+    </script>
+  </body>
+</html>

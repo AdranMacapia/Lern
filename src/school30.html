@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trinity University of Asia - School Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet" href="styles.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">
+        <img src="/assets/logo.png" alt="Logo" />
+        Learning Education Resource Network
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <ul class="social-icons">
+        <li><a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+    </nav>
+
+    <header class="school-header">
+      <h1>Trinity University of Asia</h1>
+      <p>Pro Deo et Patria</p>
+    </header>
+
+    <main class="school-content">
+      <div class="school-image">
+        <img
+          src="/assets/301.jpg"
+          alt=""
+          class="active"
+        />
+        <img src="/assets/302.jpg" alt="" />
+        <img src="/assets/303.jpg" alt="" />
+        <img src="/assets/304.jpg" alt="" />
+        <div class="image-nav"></div>
+      </div>
+      <div class="school-info">
+        <h2>About Trinity University of Asia (TUA)</h2>
+        <p>
+            Established in 1963 in Quezon City, 
+            TUA is a Christian university affiliated with the Episcopal Church. 
+            Known for its commitment to social responsibility, 
+            it provides a range of academic programs and emphasizes a values-based education.
+        </p>
+
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab-button active" onclick="openTab(event, 'rules')">
+              School Rules
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'courses')">
+              Offered Courses
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'contact')">
+              Contact
+            </button>
+          </div>
+
+          <div id="rules" class="tab-content active">
+            <ul>
+              <li>
+                <b>Rules:</b> TUA requires students to adhere to a semi-formal dress code, particularly on campus grounds. 
+                Specific attire guidelines apply to different colleges and activities.
+              </li>
+            </ul>
+          </div>
+
+          <div id="courses" class="tab-content">
+            <ul>
+            <li>Bachelor of Arts in Communication</li>
+            <li>Bachelor of Science in Biology</li>
+            <li>Bachelor of Science in Computer Engineering</li>
+            <li>Bachelor of Science in Hospitality Management</li>
+            <li>Bachelor of Science in Medical Technology</li>
+            <li>Bachelor of Science in Nursing</li>
+            <li>Bachelor of Science in Psychology</li>
+            <li>Bachelor of Science in Tourism Management</li>
+            <li>Bachelor of Secondary Education</li>
+            </ul>
+            
+          </div>
+        </div>
+        <div id="contact" class="tab-content">
+          <h3>Contact Information</h3>
+          <p><b>Address:</b> <li>275 E Rodriguez Sr. Avenue, Quezon City, Metro Manila, Philippines</li></p>
+          <p><b>Phone:</b> +63 2 7027 5302</p>
+          <p>
+            <b>Facebook:</b>
+            <a
+              href="https://www.facebook.com/Trinity University of Asia Facebook Page"
+              target="_blank"
+              rel="noopener noreferrer"
+              >facebook.com/TUA</a>
+          </p>
+        </div>
+
+        <a href="Quezon.html" class="back-link">Back to Gallery</a>
+      </div>
+    </main>
+
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabContent, tabButtons;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+        tabButtons = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tabButtons.length; i++) {
+          tabButtons[i].className = tabButtons[i].className.replace(
+            " active",
+            ""
+          );
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Image slider functionality
+      const images = document.querySelectorAll(".school-image img");
+      const imageNav = document.querySelector(".image-nav");
+      let currentImage = 0;
+
+      // Create navigation buttons
+      images.forEach((_, index) => {
+        const button = document.createElement("button");
+        button.addEventListener("click", () => showImage(index));
+        imageNav.appendChild(button);
+      });
+
+      const navButtons = imageNav.querySelectorAll("button");
+
+      function showImage(index) {
+        images[currentImage].classList.remove("active");
+        navButtons[currentImage].classList.remove("active");
+        currentImage = index;
+        images[currentImage].classList.add("active");
+        navButtons[currentImage].classList.add("active");
+      }
+
+      function nextImage() {
+        showImage((currentImage + 1) % images.length);
+      }
+
+      // Initialize
+      showImage(0);
+      setInterval(nextImage, 5000); // Change image every 5 seconds
+    </script>
+  </body>
+</html>

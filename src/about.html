@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Gallery - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(109.6deg, rgb(44, 83, 131) 18.9%, rgb(95, 175, 201) 91.1%);
+        }
+        .navbar {
+            background-color: #1c3f60;
+            padding: 5px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .navbar-brand img {
+            height: 80px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .navbar-menu {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar-menu li {
+            margin: 0 15px;
+        }
+        .navbar-menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+        .navbar-menu li a:hover {
+            color: #95d5e5;
+        }
+        .social-icons {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+        }
+        .social-icons li {
+            margin-left: 15px;
+        }
+        .social-icons li a {
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .social-icons li a:hover {
+            color: #95d5e5;
+        }
+        .content {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .features {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .feature {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        flex-basis: calc(33.333% - 1rem);
+    }
+
+    .feature i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .feature {
+            flex-basis: calc(50% - 1rem);
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.75rem;
+        }
+
+        .feature {
+            flex-basis: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <img src="/assets/logo.png" alt="Logo">
+            Learning Education Resource Network
+        </a>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>About L.E.R.N.</h1>
+        <p>Learning Education Resource Network or L.E.R.N. is a comprehensive platform designed to help students, parents, and educators explore and discover educational institutions across various locations. Our mission is to provide detailed, up-to-date information about schools, making the process of finding the right educational fit easier and more accessible.</p>
+        <p>Founded in 2024, L.E.R.N. has quickly become a trusted resource for those seeking quality education options. We believe that every student deserves access to information that can help them make informed decisions about their academic journey.</p>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-search"></i>
+                <h3>Easy Search</h3>
+                <p>Find schools by location or program</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-info-circle"></i>
+                <h3>Detailed Info</h3>
+                <p>Comprehensive details on each school</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-comments"></i>
+                <h3>User Reviews</h3>
+                <p>Read experiences from current and former students</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

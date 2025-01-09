@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Gallery - FAQ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(109.6deg, rgb(44, 83, 131) 18.9%, rgb(95, 175, 201) 91.1%);
+        }
+        .navbar {
+            background-color: #1c3f60;
+            padding: 5px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .navbar-brand img {
+            height: 80px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .navbar-menu {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar-menu li {
+            margin: 0 15px;
+        }
+        .navbar-menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+        .navbar-menu li a:hover {
+            color: #95d5e5;
+        }
+        .social-icons {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+        }
+        .social-icons li {
+            margin-left: 15px;
+        }
+        .social-icons li a {
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        .social-icons li a:hover {
+            color: #95d5e5;
+        }
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .faq-list {
+            list-style-type: none;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .faq-question:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .faq-answer {
+            display: none;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 0 0 5px 5px;
+        }
+        .faq-question::after {
+            content: '\f078';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            float: right;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar-menu, .social-icons {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <img src="/assets/logo.png" alt="Logo">
+            Learning Education Resource Network
+        </a>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Frequently Asked Questions</h1>
+        <ul class="faq-list">
+            <li class="faq-item">
+                <div class="faq-question">How do I search for schools on School Gallery?</div>
+                <div class="faq-answer">You can search for schools by using the search function on our homepage. Simply select a location and/or course type, and click the search button to view relevant results.</div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">Are the school listings on School Gallery up-to-date?</div>
+                <div class="faq-answer">We strive to keep all our listings as current as possible. However, we recommend contacting the schools directly to confirm the most recent information.</div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">How can I add my school to School Gallery?</div>
+                <div class="faq-answer">If you'd like to add your school to our gallery, please contact us through our Contact page. We'll review your request and get back to you with further instructions.</div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">Is School Gallery free to use?</div>
+                <div class="faq-answer">Yes, School Gallery is completely free for students and parents to use. We do not charge any fees for searching or viewing school information.</div>
+            </li>
+            <li class="faq-item">
+                <div class="faq-question">Can I leave reviews for schools on School Gallery?</div>
+                <div class="faq-answer">Currently, we do not have a review system in place. However, we're working on implementing this feature in the near future to provide more comprehensive information to our users.</div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentNode;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

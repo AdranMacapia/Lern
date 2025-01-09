@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>International School Manila - School Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet" href="styles.css"
+    />
+    
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">
+        <img src="/assets/logo.png" alt="Logo" />
+        Learning Education Resource Network
+      </a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+      <ul class="social-icons">
+        <li><a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+    </nav>
+
+    <header class="school-header">
+      <h1>International School Manila</h1>
+      <p>Veritas et democratia</p>
+    </header>
+
+    <main class="school-content">
+      <div class="school-image">
+        <img
+          src="/assets/ism1.jpg"
+          alt="International School Manila Campus 1"
+          class="active"
+        />
+        <img src="/assets/ism2.jpg" alt="International School Manila Campus 2" />
+        <img src="/assets/ism3.jpg" alt="International School Manila Campus 3" />
+        <img src="/assets/ism4.jpg" alt="International School Manila Campus 4" />
+        <div class="image-nav"></div>
+      </div>
+      <div class="school-info">
+        <h2>About International School Manila</h2>
+        <p>
+            In 1970, the American School was renamed to International School Manila (ISM) at the recommendation of the US Embassy. In the same year, ISM became the first international school to receive accreditation from the Western Association of Schools and Colleges (WASC). In 1982, ISM joined the Interscholastic Association of Southeast Asian Schools (IASAS). By 2002, the school transferred from Makati to its present location in Bonifacio Global City.
+        </p>
+
+        <div class="tab-container">
+          <div class="tab-buttons">
+            <button class="tab-button active" onclick="openTab(event, 'rules')">
+              School Rules
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'courses')">
+              Offered Courses
+            </button>
+            <button class="tab-button" onclick="openTab(event, 'contact')">
+              Contact
+            </button>
+          </div>
+
+          <div id="rules" class="tab-content active">
+            <p><b style="font-size: large;">Mission:</b> To build a vibrant and enterprising learning community in which all strive to: </p>
+            <ul>
+              <li>Accentuate learning, growth, perseverance and self-awareness as life-long values.</li>
+              <li>Nurture creativity and originality as precursors for critical and reﬂective thought and action.</li>
+              <li>Succeed collectively as well as individually, achieving our personal best in all aspects of school life.</li>
+              <li>Maintain a healthy balance in the time devoted to work, rest and recreation.</li>
+              <li>Involve our community in sustaining and safeguarding our environment.</li>
+              <li>Interact through honest, respectful and open communication.</li>
+              <li>Acknowledge and celebrate our differences and encourage empathy, compassion, understanding and respect for human dignity.</li>
+              <li>Live our lives positively, joyfully and ethically.</li>
+            </ul>
+          </div>
+
+          <div id="courses" class="tab-content">
+            <h3>Elementary</h3>
+            <ul>
+                <li>Grade 1 to Grade 6</li>
+            </ul>
+            <h3>Junior High School</h3>
+            <ul>
+                <li>Grade 7 to Grade 10</li>
+            </ul>
+            <h3>Senior High School</h3>
+            <ul>
+                <li>Grade 11 and Grade 12</li>
+            </ul>
+            <h3>Other Programs</h3>
+            <ul>
+                <li>English Tutorials</li>
+                <li>Speech Languages</li>
+                <li>Psychological Educational</li>
+                <li>Musical Tutorials</li>
+                <li>Theater Workshops</li>
+                <li>Education Assistance</li>
+            </ul>
+        </div>
+        
+        </div>
+        <div id="contact" class="tab-content">
+          <h3>Contact Information</h3>
+          <p><b>Address:</b> University Parkway, Fort Bonifacio Global City, Taguig City 1634</p>
+          <p><b>Phone:</b> (02) 8840.8400</p>
+          <p>
+            <b>Facebook:</b>
+            <a
+              href="https://www.facebook.com/internationalschoolmanilaph"
+              target="_blank"
+              rel="noopener noreferrer"
+              >facebook.com/internationalschoolmanilaph</a
+            >
+          </p>
+        </div>
+
+        <a href="Taguig.html" class="back-link">Back to Gallery</a>
+      </div>
+    </main>
+
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabContent, tabButtons;
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+        tabButtons = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tabButtons.length; i++) {
+          tabButtons[i].className = tabButtons[i].className.replace(
+            " active",
+            ""
+          );
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Image slider functionality
+      const images = document.querySelectorAll(".school-image img");
+      const imageNav = document.querySelector(".image-nav");
+      let currentImage = 0;
+
+      // Create navigation buttons
+      images.forEach((_, index) => {
+        const button = document.createElement("button");
+        button.addEventListener("click", () => showImage(index));
+        imageNav.appendChild(button);
+      });
+
+      const navButtons = imageNav.querySelectorAll("button");
+
+      function showImage(index) {
+        images[currentImage].classList.remove("active");
+        navButtons[currentImage].classList.remove("active");
+        currentImage = index;
+        images[currentImage].classList.add("active");
+        navButtons[currentImage].classList.add("active");
+      }
+
+      function nextImage() {
+        showImage((currentImage + 1) % images.length);
+      }
+
+      // Initialize
+      showImage(0);
+      setInterval(nextImage, 5000); // Change image every 5 seconds
+    </script>
+  </body>
+</html>
