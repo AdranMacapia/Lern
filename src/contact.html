@@ -25,6 +25,9 @@
         min-height: 100vh;
         margin: 0;
         padding: 0;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
       }
       body {
         display: flex;
@@ -154,6 +157,14 @@
 
         h1 {
           font-size: 2rem;
+        }
+        .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .navbar-menu,
+        .social-icons {
+          margin-top: 10px;
         }
       }
 
