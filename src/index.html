@@ -150,31 +150,121 @@
         margin: 20px auto;
         padding: 0 20px;
       }
+
       .gallery-item {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
+        background-color: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
         overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.3s ease,
+          filter 0.3s ease;
       }
+
       .gallery-item:hover {
-        transform: translateY(-5px);
+        transform: translateY(-6px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        opacity: 0.98;
+        filter: brightness(1.05);
       }
+
       .gallery-item a {
         display: block;
         text-decoration: none;
-        color: #fff;
+        color: #333;
       }
+
       .gallery-item img {
         width: 100%;
-        height: 200px;
+        height: 240px;
         object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
       }
+
+      .gallery-item img:hover {
+        transform: scale(1.07);
+        opacity: 0.95;
+      }
+
       .gallery-item h3 {
-        padding: 15px;
+        padding: 12px 0;
         margin: 0;
         font-size: 18px;
-        text-align: center;
+        color: #333;
+        font-weight: 600;
+        text-transform: capitalize;
+        letter-spacing: 0.5px;
+        transition: color 0.3s ease;
+      }
+
+      .gallery-item:hover h3 {
+        color: #007bff;
+      }
+
+      #course {
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      #course:focus {
+        outline: none;
+        border-color: #4d90fe;
+        box-shadow: 0 0 5px rgba(77, 144, 254, 0.7);
+      }
+
+      #course option {
+        background-color: #fff;
+        color: #333;
+        padding: 10px;
+      }
+
+      #course option:hover {
+        background-color: #f0f0f0;
+      }
+
+      /* location-style */
+
+      #location {
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      #location:focus {
+        outline: none;
+        border-color: #4d90fe;
+        box-shadow: 0 0 5px rgba(77, 144, 254, 0.7);
+      }
+
+      #location option {
+        background-color: #fff;
+        color: #333;
+        padding: 10px;
+      }
+
+      #location option:hover {
+        background-color: #f0f0f0;
       }
       @media (max-width: 1024px) {
         .gallery {
@@ -223,10 +313,28 @@
         <li><a href="faq.html">FAQ</a></li>
       </ul>
       <ul class="social-icons">
-            <li><a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-        </ul>
+        <li>
+          <a
+            href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09"
+            aria-label="Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
     </nav>
 
     <section class="welcome-section">
@@ -243,10 +351,10 @@
       <div class="search-container">
         <select id="location">
           <option value="">Select Location</option>
-          <option value="new-york">Taguig City</option>
-          <option value="los-angeles">Makati City</option>
-          <option value="chicago">Quezon City</option>
-          <option value="houston">Pasay City</option>
+          <option value="taguig">Taguig City</option>
+          <option value="makati">Makati City</option>
+          <option value="quezon">Quezon City</option>
+          <option value="pasay">Pasay City</option>
         </select>
         <select id="course">
           <option value="">Select Course</option>
@@ -254,91 +362,151 @@
           <option value="arts">Arts</option>
           <option value="business">Business</option>
           <option value="languages">Languages</option>
+          <option value="nursing">NURSING</option>
+          <option value="hospitality">Hospitality</option>
+          <option value="entrepreneurship">Entrepreneurship</option>
+          <option value="accountancy">Entrepreneurship</option>
+          <option value="criminal">Criminal</option>
+          <option value="law">Law</option>
         </select>
-        <button type="button">Search</button>
+        <button type="button" id="searchBtn">Search</button>
+        <button type="button" id="clearBtn">Clear Filter</button>
       </div>
     </section>
 
+    <div id="searchResults"></div>
+
     <div class="gallery">
-      <div class="gallery-item">
+      <div
+        class="gallery-item"
+        data-location="taguig"
+        data-course="business,art,criminal,hospitality"
+      >
         <a href="school1.html">
-          <img src="/placeholder.svg?height=200&width=300" alt="School 1" />
-          <h3></h3>
+          <img src="../assets/tcu.png?height=300&width=300" alt="School 1" />
+          <h3>Taguig City University</h3>
         </a>
       </div>
-      <div class="gallery-item">
+      <div
+        class="gallery-item"
+        data-location="makati"
+        data-course="business,arts,entrepreneurship"
+      >
+        <a href="Makati.html">
+          <img
+            src="../assets/makati-logo.png?height=300&width=300"
+            alt="School 2"
+          />
+          <h3>Makati City University</h3>
+        </a>
+      </div>
+      <div
+        class="gallery-item"
+        data-location="quezon"
+        data-course="languages,accountancy,entrepreneurship"
+      >
+        <a href="Quezon.html">
+          <img
+            src="../assets/quezon-logo.jpg?height=300&width=300"
+            alt="School 3"
+          />
+          <h3>Quezon City University</h3>
+        </a>
+      </div>
+      <div
+        class="gallery-item"
+        data-location="pasay"
+        data-course="business,arts,law,nursing"
+      >
+        <a href="Pasay.html">
+          <img src="../assets/passay.png?height=300&width=300" alt="School 4" />
+          <h3>Pasay City University</h3>
+        </a>
+      </div>
+      <div class="gallery-item" data-location="taguig" data-course="business">
         <a href="school2.html">
-          <img src="/placeholder.svg?height=200&width=300" alt="School 2" />
-          <h3></h3>
+          <img src="../assets/end.png?height=300&width=300" alt="School 5" />
+          <h3>Enderun Colleges</h3>
         </a>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-location="taguig" data-course="stem">
         <a href="school3.html">
-          <img src="/placeholder.svg?height=200&width=300" alt="School 3" />
-          <h3></h3>
+          <img src="../assets/ism.png?height=300&width=300" alt="School 6" />
+          <h3>International School Manila</h3>
         </a>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-location="makati" data-course="business">
         <a href="school4.html">
-          <img src="/placeholder.svg?height=200&width=300" alt="School 4" />
-          <h3></h3>
+          <img src="../assets/bsm.jpg?height=300&width=300" alt="School 7" />
+          <h3>British School Manila</h3>
         </a>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-location="taguig" data-course="languages">
         <a href="school5.html">
-          <img src="/placeholder.svg?height=200&width=300" alt="School 5" />
-          <h3></h3>
+          <img src="../assets/global.png?height=300&width=300" alt="School 8" />
+          <h3>Global City Innovative College</h3>
         </a>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-location="pasay" data-course="arts">
         <a href="school6.html">
-          <img src="/placeholder.svg?height=200&width=300" alt="School 6" />
-          <h3></h3>
+          <img
+            src="../assets/everest.png?height=300&width=300"
+            alt="School 9"
+          />
+          <h3>Everest Academy Manila</h3>
         </a>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-location="quezon" data-course="business">
         <a href="school7.html">
-          <img src="/placeholder.svg?height=200&width=300" alt="School 7" />
-          <h3></h3>
+          <img src="../assets/up.png" alt="School 10" />
+          <h3>University of the Philippines</h3>
         </a>
       </div>
-      <div class="gallery-item">
+      <div class="gallery-item" data-location="taguig" data-course="stem">
         <a href="school8.html">
-          <img src="/placeholder.svg?height=200&width=300" alt="School 8" />
-          <h3></h3>
+          <img src="../assets/tsh.jpg?height=300&width=300" alt="School 11" />
+          <h3>Taguig Science High School</h3>
         </a>
       </div>
     </div>
 
     <script>
-      function searchSchools() {
-        const location = document.getElementById("location").value;
-        const course = document.getElementById("course").value;
-        const gallery = document.getElementById("gallery");
-        const items = gallery.getElementsByClassName("gallery-item");
+      document
+        .getElementById("searchBtn")
+        .addEventListener("click", function () {
+          const selectedLocation = document.getElementById("location").value;
+          const selectedCourse = document.getElementById("course").value;
 
-        gallery.style.display = "grid";
+          const galleryItems = document.querySelectorAll(".gallery-item");
 
-        for (let item of items) {
-          if (
-            (location === "" || item.dataset.location === location) &&
-            (course === "" || item.dataset.course === course)
-          ) {
-            item.style.display = "block";
-          } else {
-            item.style.display = "none";
-          }
-        }
-      }
+          galleryItems.forEach(function (item) {
+            const itemLocation = item.getAttribute("data-location");
+            const itemCourses = item
+              .getAttribute("data-course")
+              .split(",")
+              .map((course) => course.trim());
 
-      // Make the entire card clickable
-      document.querySelectorAll(".gallery-item").forEach((item) => {
-        item.style.cursor = "pointer";
-        item.addEventListener("click", function (e) {
-          e.preventDefault();
-          window.location.href = this.querySelector("a").href;
+            if (
+              (selectedLocation === "" || itemLocation === selectedLocation) &&
+              (selectedCourse === "" || itemCourses.includes(selectedCourse))
+            ) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
         });
-      });
+      document
+        .getElementById("clearBtn")
+        .addEventListener("click", function () {
+          document.getElementById("location").value = "";
+          document.getElementById("course").value = "";
+
+          const galleryItems = document.querySelectorAll(".gallery-item");
+          galleryItems.forEach(function (item) {
+            item.style.display = "block";
+          });
+        });
     </script>
   </body>
 </html>
