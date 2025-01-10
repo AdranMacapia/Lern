@@ -1,508 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>School Gallery - Home</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body,
-      html {
-        font-family: "Poppins", sans-serif;
-        color: #fff;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-        overflow: auto;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(to bottom, #56708E 0%, #56708E 37%, #cccccc);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .navbar {
-        padding: 5px 5%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .navbar-brand {
-        display: flex;
-        align-items: center;
-        color: #fff;
-        text-decoration: none;
-        font-size: 24px;
-        font-weight: 600;
-      }
-      .navbar-brand img {
-        height: 80px;
-        width: auto;
-        margin-right: 10px;
-      }
-      .navbar-menu {
-        display: flex;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        flex-grow: 1;
-        justify-content: center;
-        align-items: center;
-      }
-      .navbar-menu li {
-        margin: 0 15px;
-      }
-      .navbar-menu li a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: 400;
-        transition: color 0.3s ease;
-      }
-      .navbar-menu li a:hover {
-        color: #95d5e5;
-      }
-      .social-icons {
-        display: flex;
-        list-style-type: none;
-        align-items: center;
-      }
-      .social-icons li {
-        margin-left: 15px;
-      }
-      .social-icons li a {
-        color: #fff;
-        font-size: 18px;
-        transition: color 0.3s ease;
-      }
-      .social-icons li a:hover {
-        color: #95d5e5;
-      }
-      .welcome-section {
-        text-align: center;
-        padding: 50px 20px;
-      }
-      .welcome-section h1 {
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
-      .welcome-section p {
-        font-size: 1.2em;
-        max-width: 1000px;
-        margin: 0 auto;
-        opacity: 0.8;
-      }
-      .search-section {
-        padding: 30px 20px;
-      }
-      .search-container {
-        max-width: 800px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .search-container select,
-      .search-container button {
-        padding: 10px 15px;
-        font-size: 1em;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0.2);
-        color: #fff;
-      }
-      .search-container select {
-        flex-grow: 1;
-        margin-right: 10px;
-      }
-      .search-container button {
-        background-color: #1c3f60;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      .search-container button:hover {
-        background-color: #2c5d8b;
-      }
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        max-width: 1200px;
-        margin: 20px auto;
-        padding: 0 20px;
-      }
 
-      .gallery-item {
-        background-color: #fff;
-        border-radius: 12px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        text-align: center;
-        overflow: hidden;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.3s ease,
-          filter 0.3s ease;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Gallery - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="iStyles.css" rel="stylesheet">
+</head>
 
-      .gallery-item:hover {
-        transform: translateY(-6px) scale(1.05);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        opacity: 0.98;
-        filter: brightness(1.05);
-      }
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="../assets/logo.png" alt="Logo">
+      Learning Education Resource Network
+    </a>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <ul class="social-icons">
+      <li><a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i
+            class="fab fa-facebook"></i></a></li>
+      <li><a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i
+            class="fab fa-twitter"></i></a></li>
+      <li><a
+          href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+  </nav>
 
-      .gallery-item a {
-        display: block;
-        text-decoration: none;
-        color: #333;
-      }
+  <section class="welcome-section">
+    <h1>Welcome to Learning Education Resource Network (L.E.R.N.)</h1>
+    <p>At L.E.R.N., we believe that finding the right university should be simple and accessible to everyone. Our
+      platform connects students worldwide with universities that match their academic goals, career ambitions, and
+      personal preferences.</p>
+  </section>
 
-      .gallery-item img {
-        width: 100%;
-        height: 240px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 15px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-      }
-
-      .gallery-item img:hover {
-        transform: scale(1.07);
-        opacity: 0.95;
-      }
-
-      .gallery-item h3 {
-        padding: 12px 0;
-        margin: 0;
-        font-size: 18px;
-        color: #333;
-        font-weight: 600;
-        text-transform: capitalize;
-        letter-spacing: 0.5px;
-        transition: color 0.3s ease;
-      }
-
-      .gallery-item:hover h3 {
-        color: #007bff;
-      }
-
-      #course {
-        color: #fff;
-        font-size: 16px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      #course:focus {
-        outline: none;
-        border-color: #4d90fe;
-        box-shadow: 0 0 5px rgba(77, 144, 254, 0.7);
-      }
-
-      #course option {
-        background-color: #fff;
-        color: #333;
-        padding: 10px;
-      }
-
-      #course option:hover {
-        background-color: #f0f0f0;
-      }
-
-      /* location-style */
-
-      #location {
-        color: #fff;
-        font-size: 16px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-
-      #location:focus {
-        outline: none;
-        border-color: #4d90fe;
-        box-shadow: 0 0 5px rgba(77, 144, 254, 0.7);
-      }
-
-      #location option {
-        background-color: #fff;
-        color: #333;
-        padding: 10px;
-      }
-
-      #location option:hover {
-        background-color: #f0f0f0;
-      }
-      @media (max-width: 1024px) {
-        .gallery {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-      @media (max-width: 768px) {
-        .gallery {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        .navbar {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .navbar-menu,
-        .social-icons {
-          margin-top: 10px;
-        }
-      }
-      @media (max-width: 480px) {
-        .gallery {
-          grid-template-columns: 1fr;
-        }
-        .search-container {
-          flex-direction: column;
-        }
-        .search-container select,
-        .search-container button {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar">
-      <a href="index.html" class="navbar-brand">
-        <img src="../assets/logo.png" alt="Logo" />
-        Learning Education Resource Network
-      </a>
-      <ul class="navbar-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="location.html">Location</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-      <ul class="social-icons">
-        <li>
-          <a
-            href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09"
-            aria-label="Twitter"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            aria-label="LinkedIn"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-      </ul>
-    </nav>
-
-    <section class="welcome-section">
-      <h1>Welcome to Learning Education Resource Network (L.E.R.N.)</h1>
-      <p>
-        At L.E.R.N., we believe that finding the right university should be
-        simple and accessible to everyone. Our platform connects students
-        worldwide with universities that match their academic goals, career
-        ambitions, and personal preferences.
-      </p>
-    </section>
-
-    <section class="search-section">
-      <div class="search-container">
-        <select id="location">
-          <option value="">Select Location</option>
+  <section class="search-section">
+    <div class="search-container">
+      <div class="select-wrapper">
+        <select id="location" required>
+          <option value="" disabled selected hidden>Select Location</option>
           <option value="taguig">Taguig City</option>
           <option value="makati">Makati City</option>
           <option value="quezon">Quezon City</option>
           <option value="pasay">Pasay City</option>
         </select>
-        <select id="course">
-          <option value="">Select Course</option>
-          <option value="stem">STEM</option>
-          <option value="arts">Arts</option>
-          <option value="business">Business</option>
-          <option value="languages">Languages</option>
-          <option value="nursing">NURSING</option>
-          <option value="hospitality">Hospitality</option>
-          <option value="entrepreneurship">Entrepreneurship</option>
-          <option value="accountancy">Entrepreneurship</option>
-          <option value="criminal">Criminal</option>
-          <option value="law">Law</option>
+      </div>
+      <div class="select-wrapper">
+        <select id="course" required>
+          <option value="" disabled selected hidden>Select Course</option>
+          <option value="Accountancy">Accountancy</option>
+          <option value="Acct_AIS">Accounting Information System (BS)</option>
+          <option value="Acct_BS">Accountancy (BS)</option>
+          <option value="Aeronautical_Eng">Aeronautical Engineering</option>
+          <option value="Air_Transport_Fly">Air Transportation (Advance Flying)</option>
+          <option value="Aircraft_Maint_Tech">Aircraft Maintenance Technology</option>
+          <option value="Architecture">Architecture</option>
+          <option value="Aviation_Comm_Flight">Aviation Communication (Flight Operations)</option>
+          <option value="Aviation_Elec_Tech">Aviation Electronics Technology</option>
+          <option value="Aviation_Info_Sys">Aviation Information System</option>
+          <option value="Aviation_Logistics">Aviation Logistics</option>
+          <option value="Aviation_Safety_Sec">Aviation Safety & Security Management</option>
+          <option value="Aviation_Tourism">Aviation Tourism (Travel Management)</option>
+          <option value="BA_Comm">Communication (BA)</option>
+          <option value="BA_Corp_Management">Corporate Management</option>
+          <option value="BA_Finance">Financial Management</option>
+          <option value="BA_HR">Human Resource Management</option>
+          <option value="BA_HR_Management">Human Resource Management</option>
+          <option value="BA_International_Business">International Business</option>
+          <option value="BA_Marketing">Marketing Management</option>
+          <option value="BA_Marketing_Management">Marketing Management</option>
+          <option value="BA_Operations_Hospitality">Operations Management (Hospitality)</option>
+          <option value="BA_Sustainability">Sustainability Management</option>
+          <option value="BA_Tech_Management">Technology Management</option>
+          <option value="BS_Bus_Admin">Business Administration (BS)</option>
+          <option value="BS_Entrepreneurship">Entrepreneurship (BS)</option>
+          <option value="BS_Env_Planning">Environmental Planning (BS)</option>
+          <option value="Business">Virata School of Business</option>
+          <option value="Business_Management">Business Management</option>
+          <option value="Criminology">Criminology</option>
+          <option value="CS">Computer Science</option>
+          <option value="Design_Bachelor">Design (Bachelor)</option>
+          <option value="Early_Childhood_Ed">Early Childhood Education</option>
+          <option value="ECE">Early Childhood Education (BS)</option>
+          <option value="Economics">Economics</option>
+          <option value="Elem_Ed">Elementary Education</option>
+          <option value="Engineering">College of Engineering</option>
+          <option value="Entrepreneurship">Entrepreneurship</option>
+          <option value="Entrepreneurship_Culinary">Entrepreneurship in Culinary Arts</option>
+          <option value="Entrepreneurship_Tourism">Entrepreneurship with Tourism Specialization</option>
+          <option value="Hospitality">Hospitality Management</option>
+          <option value="HS_Culinary">International Hospitality Management</option>
+          <option value="Interior_Design">Interior Design</option>
+          <option value="Intrapreneurship_Program">Intrapreneurship</option>
+          <option value="IS">Information System</option>
+          <option value="IT">Information Technology</option>
+          <option value="Law">College of Law</option>
+          <option value="Management_Accounting">Management Accounting</option>
+          <option value="Multimedia_Arts">Multimedia Arts</option>
+          <option value="Office_Admin">Office Administration</option>
+          <option value="PA_Theater">Performing Arts - Theater Track</option>
+          <option value="Psychology">Psychology</option>
+          <option value="Public_Admin">Public Administration</option>
+          <option value="SecEd_English">Secondary Education - English</option>
+          <option value="SecEd_Math">Secondary Education - Mathematics</option>
+          <option value="SecEd_Sci">Secondary Education - Science</option>
+          <option value="Social_Work">Social Work</option>
+          <option value="Tourism">Tourism Management</option>
+
         </select>
-        <button type="button" id="searchBtn">Search</button>
-        <button type="button" id="clearBtn">Clear Filter</button>
       </div>
-    </section>
+      <button type="button" id="searchBtn">Search</button>
+      <button type="button" id="clearBtn">Clear Filter</button>
+    </div>
+    <p class="required-note">* Required fields</p>
+  </section>
 
-    <div id="searchResults"></div>
+  <div id="searchResults"></div>
 
-    <div class="gallery">
-      <div
-        class="gallery-item"
-        data-location="taguig"
-        data-course="business,art,criminal,hospitality"
-      >
-        <a href="school1.html">
-          <img src="../assets/tcu.png?height=300&width=300" alt="School 1" />
-          <h3>Taguig City University</h3>
-        </a>
-      </div>
-      <div
-        class="gallery-item"
-        data-location="makati"
-        data-course="business,arts,entrepreneurship"
-      >
-        <a href="Makati.html">
-          <img
-            src="../assets/makati-logo.png?height=300&width=300"
-            alt="School 2"
-          />
-          <h3>Makati City University</h3>
-        </a>
-      </div>
-      <div
-        class="gallery-item"
-        data-location="quezon"
-        data-course="languages,accountancy,entrepreneurship"
-      >
-        <a href="Quezon.html">
-          <img
-            src="../assets/quezon-logo.jpg?height=300&width=300"
-            alt="School 3"
-          />
-          <h3>Quezon City University</h3>
-        </a>
-      </div>
-      <div
-        class="gallery-item"
-        data-location="pasay"
-        data-course="business,arts,law,nursing"
-      >
-        <a href="Pasay.html">
-          <img src="../assets/passay.png?height=300&width=300" alt="School 4" />
-          <h3>Pasay City University</h3>
-        </a>
-      </div>
-      <div class="gallery-item" data-location="taguig" data-course="business">
-        <a href="school2.html">
-          <img src="../assets/end.png?height=300&width=300" alt="School 5" />
-          <h3>Enderun Colleges</h3>
-        </a>
-      </div>
-      <div class="gallery-item" data-location="taguig" data-course="stem">
-        <a href="school3.html">
-          <img src="../assets/ism.png?height=300&width=300" alt="School 6" />
-          <h3>International School Manila</h3>
-        </a>
-      </div>
-      <div class="gallery-item" data-location="makati" data-course="business">
-        <a href="school4.html">
-          <img src="../assets/bsm.jpg?height=300&width=300" alt="School 7" />
-          <h3>British School Manila</h3>
-        </a>
-      </div>
-      <div class="gallery-item" data-location="taguig" data-course="languages">
-        <a href="school5.html">
-          <img src="../assets/global.png?height=300&width=300" alt="School 8" />
-          <h3>Global City Innovative College</h3>
-        </a>
-      </div>
-      <div class="gallery-item" data-location="pasay" data-course="arts">
-        <a href="school6.html">
-          <img
-            src="../assets/eas.jpg?height=300&width=300"
-            alt="School 9"
-          />
-          <h3>Everest Academy Manila</h3>
-        </a>
-      </div>
-      <div class="gallery-item" data-location="quezon" data-course="business">
-        <a href="school7.html">
-          <img src="../assets/up.png" alt="School 10" />
-          <h3>University of the Philippines</h3>
-        </a>
-      </div>
-      <div class="gallery-item" data-location="taguig" data-course="stem">
-        <a href="school8.html">
-          <img src="../assets/tsh.jpg?height=300&width=300" alt="School 11" />
-          <h3>Taguig Science High School</h3>
-        </a>
-      </div>
+  <div class="gallery">
+    <div class="gallery-item" data-location="taguig"
+      data-course="CS, IS, Tourism, Hospitality, BA_HR, BA_Marketing, Office_Admin, Entrepreneurship, Psychology, Social_Work, Public_Admin, Elem_Ed, SecEd_English, SecEd_Math, SecEd_Sci, Criminology">
+      <a href="school1.html">
+        <img src="../assets/tcu.png?height=300&width=300" alt="School 1">
+        <h3>Taguig City University</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="makati"
+      data-course="BA_Comm_Advertising, BA_Comm_Media, BA_Comm_Digital_Content, Psychology, BA_Psychology, BS_Psychology, Interior_Design, PA_Theater, Early_Childhood_Ed, Elem_Ed, SecEd_English, BA_Corp_Management, BA_HR_Management, BA_International_Business, BA_Marketing_Management, Entrepreneurship, Entrepreneurship_Tourism, Entrepreneurship_Culinary, Accountancy, Management_Accounting">
+      <a href="school11.html">
+        <img src="../assets/Assumption_College_logo.png?height=300&width=300" alt="School 2">
+        <h3>Assumption College</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="quezon"
+      data-course="Acct_BS, Acct_AIS, BS_Bus_Admin, BA_Comm, Design_Bachelor, BS_Entrepreneurship, ECE, BA_International_Studies, BS_Env_Planning">
+      <a href="school27.html">
+        <img src="../assets/2.png?height=300&width=300" alt="School 3">
+        <h3>Miriam College</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="pasay" data-course="business,arts,law,nursing">
+      <a href="school23.html">
+        <img src="../assets/download (1).png?height=300&width=300" alt="School 4">
+        <h3>Pasay City Academy</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="taguig"
+      data-course="HS_Culinary, BA_Finance, BA_Operations_Hospitality, BA_Tech_Management, BA_Sustainability, Intrapreneurship_Program, Economics, Architecture, Interior_Design, Multimedia_Arts">
+      <a href="school2.html">
+        <img src="../assets/end.png?height=300&width=300" alt="School 5">
+        <h3>Enderun Colleges</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="taguig" data-course="stem">
+      <a href="school3.html">
+        <img src="../assets/ism.png?height=300&width=300" alt="School 6">
+        <h3>International School Manila</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="makati" data-course="business">
+      <a href="school4.html">
+        <img src="../assets/bsm.jpg?height=300&width=300" alt="School 7">
+        <h3>British School Manila</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="taguig" data-course="IT, Business_Management, Tourism, Hospitality">
+      <a href="school5.html">
+        <img src="../assets/global.png?height=300&width=300" alt="School 8">
+        <h3>Global City Innovative College</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="taguig" data-course="arts">
+      <a href="school6.html">
+        <img src="../assets/eas.jpg?height=300&width=300" alt="School 9">
+        <h3>Everest Academy Manila</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="taguig" data-course="Law, Engineering, Business, Architecture">
+      <a href="school7.html">
+        <img src="../assets/up.png" alt="School 10">
+        <h3>Polytechnic University of the Philippines</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="taguig" data-course="stem">
+      <a href="school8.html">
+        <img src="../assets/tsh.jpg?height=300&width=300" alt="School 11">
+        <h3>Taguig Science High School</h3>
+      </a>
+    </div>
+    <div class="gallery-item" data-location="pasay"
+      data-course="Aeronautical_Eng, Air_Transport_Fly, Aircraft_Maint_Tech, Aviation_Elec_Tech, Aviation_Comm_Flight, Aviation_Safety_Sec, Aviation_Logistics, Aviation_Tourism, Aviation_Info_Sys">
+      <a href="school18.html">
+        <img src="../assets/Seal_of_the_Philippine_State_College_of_Aeronautics.png?height=300&width=300"
+          alt="School 12">
+        <h3>Philippine State College of Aeronautics</h3>
+      </a>
     </div>
 
-    <script>
-      document
-        .getElementById("searchBtn")
-        .addEventListener("click", function () {
-          const selectedLocation = document.getElementById("location").value;
-          const selectedCourse = document.getElementById("course").value;
+  </div>
 
-          const galleryItems = document.querySelectorAll(".gallery-item");
+  <script>
+    document.getElementById("searchBtn").addEventListener("click", function () {
+      const selectedLocation = document.getElementById("location");
+      const selectedCourse = document.getElementById("course");
 
-          galleryItems.forEach(function (item) {
-            const itemLocation = item.getAttribute("data-location");
-            const itemCourses = item
-              .getAttribute("data-course")
-              .split(",")
-              .map((course) => course.trim());
+      if (selectedLocation.value === "" || selectedCourse.value === "") {
+        alert("Please select both a location and a course before searching.");
+        return;
+      }
 
-            if (
-              (selectedLocation === "" || itemLocation === selectedLocation) &&
-              (selectedCourse === "" || itemCourses.includes(selectedCourse))
-            ) {
-              item.style.display = "block";
-            } else {
-              item.style.display = "none";
-            }
-          });
-        });
-      document
-        .getElementById("clearBtn")
-        .addEventListener("click", function () {
-          document.getElementById("location").value = "";
-          document.getElementById("course").value = "";
+      const galleryItems = document.querySelectorAll(".gallery-item");
 
-          const galleryItems = document.querySelectorAll(".gallery-item");
-          galleryItems.forEach(function (item) {
-            item.style.display = "block";
-          });
-        });
-    </script>
-  </body>
+      galleryItems.forEach(function (item) {
+        const itemLocation = item.getAttribute("data-location");
+        const itemCourses = item.getAttribute("data-course").split(",").map(course => course.trim());
+
+        if (itemLocation === selectedLocation.value && itemCourses.includes(selectedCourse.value)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+
+    document.getElementById("clearBtn").addEventListener("click", function () {
+      document.getElementById("location").value = "";
+      document.getElementById("course").value = "";
+
+      const galleryItems = document.querySelectorAll(".gallery-item");
+      galleryItems.forEach(function (item) {
+        item.style.display = "block";
+      });
+    });
+  </script>
+</body>
+
 </html>
+```

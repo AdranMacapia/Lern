@@ -1,202 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taguig Science High School - School Gallery</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <a href="index.html" class="navbar-brand">
-        <img src="../assets/logo.png" alt="Logo" />
-        Learning Education Resource Network
-      </a>
-      <ul class="navbar-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="location.html">Location</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-      <ul class="social-icons">
-        <li>
-          <a
-            href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09"
-            aria-label="Twitter"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            aria-label="LinkedIn"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-      </ul>
-    </nav>
 
-    <header class="school-header">
-      <h1>Taguig Science High School</h1>
-      <p>Leading the road to excellence</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taguig Science High School - School Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <main class="school-content">
-      <div class="school-image">
-        <img
-          src="../assets/tsh1.jpg"
-          alt="Taguig Science High School Campus 1"
-          class="active"
-        />
-        <img
-          src="../assets/tsh2.jpg"
-          alt="Taguig Science High School Campus 2"
-        />
-        <img
-          src="../assets/tsh3.png"
-          alt="Taguig Science High School Campus 3"
-        />
-        <div class="image-nav"></div>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="../assets/logo.png" alt="Logo" />
+      Learning Education Resource Network
+    </a>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <ul class="social-icons">
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i
+            class="fab fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i
+            class="fab fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="school-header">
+    <h1>Taguig Science High School</h1>
+    <p>Leading the road to excellence</p>
+  </header>
+
+  <main class="school-content">
+    <div class="school-image">
+      <img src="../assets/tsh1.jpg" alt="Taguig Science High School Campus 1" class="active" />
+      <img src="../assets/tsh2.jpg" alt="Taguig Science High School Campus 2" />
+      <img src="../assets/tsh3.png" alt="Taguig Science High School Campus 3" />
+      <div class="image-nav"></div>
+    </div>
+    <div class="school-info">
+      <h2>About Taguig Science High School</h2>
+      <p>
+        Taguig Science High School (TSHS) (Filipino: Mataas ng Paaralang
+        Pang-Agham ng Tagig), also known as TagSci or TagSat, is a public
+        science high school located in San Miguel, Taguig, Philippines. It is
+        one of the three science high schools of the city, and is managed and
+        administered by the Schools Divisions Office of Taguig City and
+        Pateros (SDO-TaPat). TSHS traces its roots from the Special Science
+        class of Signal Village National High School. Its establishment was
+        made possible by the collaboration of the Taguig City Government under
+        Mayor Sigfrido R. Tiñga with the SDO-TaPat, then under Schools
+        Division Superintendent, Jovita O. Calixihan.
+      </p>
+
+      <div class="tab-container">
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="openTab(event, 'rules')">
+            School Rules
+          </button>
+          <button class="tab-button" onclick="openTab(event, 'courses')">
+            Offered Courses
+          </button>
+          <button class="tab-button" onclick="openTab(event, 'contact')">
+            Contact
+          </button>
+        </div>
+
+        <div id="rules" class="tab-content active">
+          <ul>
+            <li>
+              The mission of Taguig Science High School (TSHS) is to create a
+              safe and supportive environment for children, where their voices
+              are heard, their dreams are nurtured, and their lives are
+              cherished
+            </li>
+          </ul>
+        </div>
+
+        <div id="courses" class="tab-content">
+          <ul>
+            <li>
+              Science, Math, and English curriculum: TSHS specializes in these
+              subjects
+            </li>
+            <li>
+              Senior High School (SHS): TSHS offers two tracks in SHS:
+              <ul>
+                <li>
+                  Science and Technology, Engineering, and Mathematics (STEM)
+                </li>
+                <li>Accountancy and Business Management (ABM)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="school-info">
-        <h2>About Taguig Science High School</h2>
+      <div id="contact" class="tab-content">
+        <h3>Contact Information</h3>
+        <p><b>Address:</b> H335+2RV, 32nd St, Taguig, Metro Manila</p>
+        <p><b>Phone:</b> (632)8981-8500</p>
         <p>
-          Taguig Science High School (TSHS) (Filipino: Mataas ng Paaralang
-          Pang-Agham ng Tagig), also known as TagSci or TagSat, is a public
-          science high school located in San Miguel, Taguig, Philippines. It is
-          one of the three science high schools of the city, and is managed and
-          administered by the Schools Divisions Office of Taguig City and
-          Pateros (SDO-TaPat). TSHS traces its roots from the Special Science
-          class of Signal Village National High School. Its establishment was
-          made possible by the collaboration of the Taguig City Government under
-          Mayor Sigfrido R. Tiñga with the SDO-TaPat, then under Schools
-          Division Superintendent, Jovita O. Calixihan.
+          <b>Website:</b>
+          <a href="https://upcat.up.edu.ph" target="_blank" rel="noopener noreferrer">upcat.up.edu.ph</a>
         </p>
-
-        <div class="tab-container">
-          <div class="tab-buttons">
-            <button class="tab-button active" onclick="openTab(event, 'rules')">
-              School Rules
-            </button>
-            <button class="tab-button" onclick="openTab(event, 'courses')">
-              Offered Courses
-            </button>
-            <button class="tab-button" onclick="openTab(event, 'contact')">
-              Contact
-            </button>
-          </div>
-
-          <div id="rules" class="tab-content active">
-            <ul>
-              <li>
-                The mission of Taguig Science High School (TSHS) is to create a
-                safe and supportive environment for children, where their voices
-                are heard, their dreams are nurtured, and their lives are
-                cherished
-              </li>
-            </ul>
-          </div>
-
-          <div id="courses" class="tab-content">
-            <ul>
-              <li>
-                Science, Math, and English curriculum: TSHS specializes in these
-                subjects
-              </li>
-              <li>
-                Senior High School (SHS): TSHS offers two tracks in SHS:
-                <ul>
-                  <li>
-                    Science and Technology, Engineering, and Mathematics (STEM)
-                  </li>
-                  <li>Accountancy and Business Management (ABM)</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="contact" class="tab-content">
-          <h3>Contact Information</h3>
-          <p><b>Address:</b> H335+2RV, 32nd St, Taguig, Metro Manila</p>
-          <p><b>Phone:</b> (632)8981-8500</p>
-          <p>
-            <b>Website:</b>
-            <a
-              href="https://upcat.up.edu.ph"
-              target="_blank"
-              rel="noopener noreferrer"
-              >upcat.up.edu.ph</a
-            >
-          </p>
-        </div>
-
-        <a href="Taguig.html" class="back-link">Back to Gallery</a>
       </div>
-    </main>
 
-    <script>
-      function openTab(evt, tabName) {
-        var i, tabContent, tabButtons;
-        tabContent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabContent.length; i++) {
-          tabContent[i].style.display = "none";
-        }
-        tabButtons = document.getElementsByClassName("tab-button");
-        for (i = 0; i < tabButtons.length; i++) {
-          tabButtons[i].className = tabButtons[i].className.replace(
-            " active",
-            ""
-          );
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+      <a href="Taguig.html" class="back-link">Back to Gallery</a>
+    </div>
+  </main>
+
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabContent, tabButtons;
+      tabContent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
       }
-
-      // Image slider functionality
-      const images = document.querySelectorAll(".school-image img");
-      const imageNav = document.querySelector(".image-nav");
-      let currentImage = 0;
-
-      // Create navigation buttons
-      images.forEach((_, index) => {
-        const button = document.createElement("button");
-        button.addEventListener("click", () => showImage(index));
-        imageNav.appendChild(button);
-      });
-
-      const navButtons = imageNav.querySelectorAll("button");
-
-      function showImage(index) {
-        images[currentImage].classList.remove("active");
-        navButtons[currentImage].classList.remove("active");
-        currentImage = index;
-        images[currentImage].classList.add("active");
-        navButtons[currentImage].classList.add("active");
+      tabButtons = document.getElementsByClassName("tab-button");
+      for (i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].className = tabButtons[i].className.replace(
+          " active",
+          ""
+        );
       }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
 
-      function nextImage() {
-        showImage((currentImage + 1) % images.length);
-      }
+    // Image slider functionality
+    const images = document.querySelectorAll(".school-image img");
+    const imageNav = document.querySelector(".image-nav");
+    let currentImage = 0;
 
-      // Initialize
-      showImage(0);
-      setInterval(nextImage, 5000); // Change image every 5 seconds
-    </script>
-  </body>
+    // Create navigation buttons
+    images.forEach((_, index) => {
+      const button = document.createElement("button");
+      button.addEventListener("click", () => showImage(index));
+      imageNav.appendChild(button);
+    });
+
+    const navButtons = imageNav.querySelectorAll("button");
+
+    function showImage(index) {
+      images[currentImage].classList.remove("active");
+      navButtons[currentImage].classList.remove("active");
+      currentImage = index;
+      images[currentImage].classList.add("active");
+      navButtons[currentImage].classList.add("active");
+    }
+
+    function nextImage() {
+      showImage((currentImage + 1) % images.length);
+    }
+
+    // Initialize
+    showImage(0);
+    setInterval(nextImage, 5000); // Change image every 5 seconds
+  </script>
+</body>
+
 </html>

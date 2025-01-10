@@ -1,211 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Ateneo Graduate School of Business - School Gallery</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <a href="index.html" class="navbar-brand">
-        <img src="../assets/logo.png" alt="Logo" />
-        Learning Education Resource Network
-      </a>
-      <ul class="navbar-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="location.html">Location</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-      <ul class="social-icons">
-        <li>
-          <a
-            href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09"
-            aria-label="Twitter"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            aria-label="LinkedIn"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-      </ul>
-    </nav>
 
-    <header class="school-header">
-      <h1>Ateneo Graduate School of Business</h1>
-      <p>Lux in Domino</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Ateneo Graduate School of Business - School Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <main class="school-content">
-      <div class="school-image">
-        <img src="../assets/91.jpg" alt="" class="active" />
-        <img src="../assets/92.jpg" alt="" />
-        <div class="image-nav"></div>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="../assets/logo.png" alt="Logo" />
+      Learning Education Resource Network
+    </a>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <ul class="social-icons">
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i
+            class="fab fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i
+            class="fab fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="school-header">
+    <h1>Ateneo Graduate School of Business</h1>
+    <p>Lux in Domino</p>
+  </header>
+
+  <main class="school-content">
+    <div class="school-image">
+      <img src="../assets/91.jpg" alt="" class="active" />
+      <img src="../assets/92.jpg" alt="" />
+      <div class="image-nav"></div>
+    </div>
+    <div class="school-info">
+      <h2>About Ateneo Graduate School of Business</h2>
+      <p>
+        The Ateneo Graduate School of Business (AGSB), part of the Ateneo de
+        Manila University, is one of the top graduate business schools in the
+        Philippines. It was founded in 1968 with the goal of providing
+        advanced education to working professionals and helping to foster
+        leadership in business, management, and related fields. The school has
+        been committed to delivering high-quality business education rooted in
+        the values of the Jesuit tradition, emphasizing ethics, leadership,
+        and a sense of service to society.
+      </p>
+
+      <div class="tab-container">
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="openTab(event, 'rules')">
+            School Rules
+          </button>
+          <button class="tab-button" onclick="openTab(event, 'courses')">
+            Offered Courses
+          </button>
+          <button class="tab-button" onclick="openTab(event, 'contact')">
+            Contact
+          </button>
+        </div>
+
+        <div id="rules" class="tab-content active">
+          <ul>
+            <li>
+              <b>Mission:</b> As a Jesuit learning institution, we are
+              committed to: • Fostering a community of leaders for others
+              grounded on the principles of Cura Personalis and Magis, and
+              passionate in their belief in the interdependence of integrity,
+              service, and expertise • Developing relevant program offerings
+              that equip our learners with the competencies for leading and
+              managing in the digital era, and mastery of self to succeed in
+              their chosen endeavor • Enhancing the personal and professional
+              growth of our faculty and staff as they are crucial partners in
+              the fulfillment of our mission
+            </li>
+            <li>
+              <b>Vision:</b> To be a leading management learning institution
+              that develops responsible business leaders with the integrity
+              and conviction to advance a sustainable society founded on human
+              dignity.
+            </li>
+            <li>
+              <b>Core Values:</b> The pursuit of our Vision and Mission is
+              grounded on: • Love of country and responsible citizenship •
+              Care for the planet, care of the environment • Expertise,
+              service, and integrity • Inclusiveness and respect for each
+              other’s differences • A safe, nurturing, and caring environment
+              for our learners, alumni, faculty, and staff
+            </li>
+          </ul>
+        </div>
+
+        <div id="courses" class="tab-content">
+          <h3>Graduate School of Business</h3>
+          <ul>
+            <li>MBA Standard</li>
+            <li>Middle Managers MBA</li>
+            <li>Ateneo-Regis MBA</li>
+            <li>MBA in Health</li>
+            <li>Master in Entrepreneurship</li>
+            <li>
+              Master in Entrepreneurship - Social Enterprise Development
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="school-info">
-        <h2>About Ateneo Graduate School of Business</h2>
+      <div id="contact" class="tab-content">
+        <h3>Contact Information</h3>
         <p>
-          The Ateneo Graduate School of Business (AGSB), part of the Ateneo de
-          Manila University, is one of the top graduate business schools in the
-          Philippines. It was founded in 1968 with the goal of providing
-          advanced education to working professionals and helping to foster
-          leadership in business, management, and related fields. The school has
-          been committed to delivering high-quality business education rooted in
-          the values of the Jesuit tradition, emphasizing ethics, leadership,
-          and a sense of service to society.
+          <b>Address:</b> Ateneo Professional Schools, Rockwell Drive, Makati
+          City, 1210, Metro Manila, Philippines
         </p>
-
-        <div class="tab-container">
-          <div class="tab-buttons">
-            <button class="tab-button active" onclick="openTab(event, 'rules')">
-              School Rules
-            </button>
-            <button class="tab-button" onclick="openTab(event, 'courses')">
-              Offered Courses
-            </button>
-            <button class="tab-button" onclick="openTab(event, 'contact')">
-              Contact
-            </button>
-          </div>
-
-          <div id="rules" class="tab-content active">
-            <ul>
-              <li>
-                <b>Mission:</b> As a Jesuit learning institution, we are
-                committed to: • Fostering a community of leaders for others
-                grounded on the principles of Cura Personalis and Magis, and
-                passionate in their belief in the interdependence of integrity,
-                service, and expertise • Developing relevant program offerings
-                that equip our learners with the competencies for leading and
-                managing in the digital era, and mastery of self to succeed in
-                their chosen endeavor • Enhancing the personal and professional
-                growth of our faculty and staff as they are crucial partners in
-                the fulfillment of our mission
-              </li>
-              <li>
-                <b>Vision:</b> To be a leading management learning institution
-                that develops responsible business leaders with the integrity
-                and conviction to advance a sustainable society founded on human
-                dignity.
-              </li>
-              <li>
-                <b>Core Values:</b> The pursuit of our Vision and Mission is
-                grounded on: • Love of country and responsible citizenship •
-                Care for the planet, care of the environment • Expertise,
-                service, and integrity • Inclusiveness and respect for each
-                other’s differences • A safe, nurturing, and caring environment
-                for our learners, alumni, faculty, and staff
-              </li>
-            </ul>
-          </div>
-
-          <div id="courses" class="tab-content">
-            <h3>Graduate School of Business</h3>
-            <ul>
-              <li>MBA Standard</li>
-              <li>Middle Managers MBA</li>
-              <li>Ateneo-Regis MBA</li>
-              <li>MBA in Health</li>
-              <li>Master in Entrepreneurship</li>
-              <li>
-                Master in Entrepreneurship - Social Enterprise Development
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="contact" class="tab-content">
-          <h3>Contact Information</h3>
-          <p>
-            <b>Address:</b> Ateneo Professional Schools, Rockwell Drive, Makati
-            City, 1210, Metro Manila, Philippines
-          </p>
-          <p>
-            <b>Phone:</b> +63 2 8929-2388 (Main Line) +63 2 8982-2488
-            (Registrar’s Office)
-          </p>
-          <p>
-            <b>Facebook:</b>
-            <a
-              href="https://web.facebook.com/AteneodeManilaGSB"
-              target="_blank"
-              rel="noopener noreferrer"
-              >facebook.com/AteneodeManilaGSB</a
-            >
-          </p>
-        </div>
-
-        <a href="Makati.html" class="back-link">Back to Gallery</a>
+        <p>
+          <b>Phone:</b> +63 2 8929-2388 (Main Line) +63 2 8982-2488
+          (Registrar’s Office)
+        </p>
+        <p>
+          <b>Facebook:</b>
+          <a href="https://web.facebook.com/AteneodeManilaGSB" target="_blank"
+            rel="noopener noreferrer">facebook.com/AteneodeManilaGSB</a>
+        </p>
       </div>
-    </main>
 
-    <script>
-      function openTab(evt, tabName) {
-        var i, tabContent, tabButtons;
-        tabContent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabContent.length; i++) {
-          tabContent[i].style.display = "none";
-        }
-        tabButtons = document.getElementsByClassName("tab-button");
-        for (i = 0; i < tabButtons.length; i++) {
-          tabButtons[i].className = tabButtons[i].className.replace(
-            " active",
-            ""
-          );
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+      <a href="Makati.html" class="back-link">Back to Gallery</a>
+    </div>
+  </main>
+
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabContent, tabButtons;
+      tabContent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
       }
-
-      // Image slider functionality
-      const images = document.querySelectorAll(".school-image img");
-      const imageNav = document.querySelector(".image-nav");
-      let currentImage = 0;
-
-      // Create navigation buttons
-      images.forEach((_, index) => {
-        const button = document.createElement("button");
-        button.addEventListener("click", () => showImage(index));
-        imageNav.appendChild(button);
-      });
-
-      const navButtons = imageNav.querySelectorAll("button");
-
-      function showImage(index) {
-        images[currentImage].classList.remove("active");
-        navButtons[currentImage].classList.remove("active");
-        currentImage = index;
-        images[currentImage].classList.add("active");
-        navButtons[currentImage].classList.add("active");
+      tabButtons = document.getElementsByClassName("tab-button");
+      for (i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].className = tabButtons[i].className.replace(
+          " active",
+          ""
+        );
       }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
 
-      function nextImage() {
-        showImage((currentImage + 1) % images.length);
-      }
+    // Image slider functionality
+    const images = document.querySelectorAll(".school-image img");
+    const imageNav = document.querySelector(".image-nav");
+    let currentImage = 0;
 
-      // Initialize
-      showImage(0);
-      setInterval(nextImage, 5000); // Change image every 5 seconds
-    </script>
-  </body>
+    // Create navigation buttons
+    images.forEach((_, index) => {
+      const button = document.createElement("button");
+      button.addEventListener("click", () => showImage(index));
+      imageNav.appendChild(button);
+    });
+
+    const navButtons = imageNav.querySelectorAll("button");
+
+    function showImage(index) {
+      images[currentImage].classList.remove("active");
+      navButtons[currentImage].classList.remove("active");
+      currentImage = index;
+      images[currentImage].classList.add("active");
+      navButtons[currentImage].classList.add("active");
+    }
+
+    function nextImage() {
+      showImage((currentImage + 1) % images.length);
+    }
+
+    // Initialize
+    showImage(0);
+    setInterval(nextImage, 5000); // Change image every 5 seconds
+  </script>
+</body>
+
 </html>

@@ -1,197 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About St. Mary's Academy of Pasay - School Gallery</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <a href="index.html" class="navbar-brand">
-        <img src="../assets/logo.png" alt="Logo" />
-        Learning Education Resource Network
-      </a>
-      <ul class="navbar-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="location.html">Location</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-      <ul class="social-icons">
-        <li>
-          <a
-            href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09"
-            aria-label="Twitter"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            aria-label="LinkedIn"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-      </ul>
-    </nav>
 
-    <header class="school-header">
-      <h1>St. Mary's Academy of Pasay</h1>
-      <p>Rev. Fr. Egmidio Trinidad</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About St. Mary's Academy of Pasay - School Gallery</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-    <main class="school-content">
-      <div class="school-image">
-        <img
-          src="../assets/tcu1.jpg"
-          alt="Taguig City University Campus 1"
-          class="active"
-        />
-        <img src="../assets/tcu2.jpg" alt="Taguig City University Campus 2" />
-        <img src="../assets/tcu3.jpg" alt="Taguig City University Campus 3" />
-        <img src="../assets/tcu4.jpg" alt="Taguig City University Campus 4" />
-        <div class="image-nav"></div>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <img src="../assets/logo.png" alt="Logo" />
+      Learning Education Resource Network
+    </a>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <ul class="social-icons">
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61568587173614&mibextid=ZbWKwL" aria-label="Facebook"><i
+            class="fab fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="https://x.com/LERNGROUP?t=XgVbYVeVRVOmq_q5Mp2vpg&s=09" aria-label="Twitter"><i
+            class="fab fa-twitter"></i></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/rizarine-malanay-2114b11b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="school-header">
+    <h1>St. Mary's Academy of Pasay</h1>
+    <p>Rev. Fr. Egmidio Trinidad</p>
+  </header>
+
+  <main class="school-content">
+    <div class="school-image">
+      <img src="../assets/tcu1.jpg" alt="Taguig City University Campus 1" class="active" />
+      <img src="../assets/tcu2.jpg" alt="Taguig City University Campus 2" />
+      <img src="../assets/tcu3.jpg" alt="Taguig City University Campus 3" />
+      <img src="../assets/tcu4.jpg" alt="Taguig City University Campus 4" />
+      <div class="image-nav"></div>
+    </div>
+    <div class="school-info">
+      <h2>About St. Mary's Academy of Pasay</h2>
+      <p>
+        Established in 1922 as "Escuela Catolica de Pasay" by Rev. Fr. Egmidio
+        Trinidad, the school initially offered primary education and was
+        managed by the parish priest. In 1939, administration was transferred
+        to the Religious of the Virgin Mary (RVM) upon the request of the
+        Archbishop of Manila, Most Rev. Michael O’Doherty. The following year,
+        it was renamed St. Mary's Academy to honor the Blessed Virgin Mary.
+        The first superior under RVM administration was Mother Maria Josefa
+        Avendaño.
+      </p>
+
+      <div class="tab-container">
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="openTab(event, 'rules')">
+            School Rules
+          </button>
+          <button class="tab-button" onclick="openTab(event, 'courses')">
+            Offered Courses
+          </button>
+          <button class="tab-button" onclick="openTab(event, 'contact')">
+            Contact
+          </button>
+        </div>
+
+        <div id="rules" class="tab-content active">
+          <ul>
+            <li>
+              <b>Vision - Mission:</b> Vision: St. Mary's Academy of Pasay
+              City is an Ignacian Marian School committed to providing quality
+              Catholic education for the development of persons, with a solid
+              foundation in Christian faith and readiness to serve the Church
+              and society. Mission: The institution aims to be an educational
+              establishment that efficiently and effectively: Produces
+              academically competent graduates, Provides client-focused
+              services, Adopts quality management systems, Advocates community
+              and Church services.
+            </li>
+            <li>
+              <b></b>
+            </li>
+          </ul>
+        </div>
+        <div id="courses" class="tab-content">
+          <h3>Available Strands</h3>
+          <ul>
+            <li>
+              Science, Technology, Engineering, and Mathematics (STEM) Strand.
+            </li>
+            <li>Humanities and Social Sciences (HUMSS) Strand.</li>
+            <li>Accountancy, Business, and Management (ABM) Strand.</li>
+          </ul>
+        </div>
       </div>
-      <div class="school-info">
-        <h2>About St. Mary's Academy of Pasay</h2>
+      <div id="contact" class="tab-content">
+        <h3>Contact Information</h3>
         <p>
-          Established in 1922 as "Escuela Catolica de Pasay" by Rev. Fr. Egmidio
-          Trinidad, the school initially offered primary education and was
-          managed by the parish priest. In 1939, administration was transferred
-          to the Religious of the Virgin Mary (RVM) upon the request of the
-          Archbishop of Manila, Most Rev. Michael O’Doherty. The following year,
-          it was renamed St. Mary's Academy to honor the Blessed Virgin Mary.
-          The first superior under RVM administration was Mother Maria Josefa
-          Avendaño.
+          <b>Address:</b> 525 P. Burgos St., Pasay City, Philippines 1300.
         </p>
-
-        <div class="tab-container">
-          <div class="tab-buttons">
-            <button class="tab-button active" onclick="openTab(event, 'rules')">
-              School Rules
-            </button>
-            <button class="tab-button" onclick="openTab(event, 'courses')">
-              Offered Courses
-            </button>
-            <button class="tab-button" onclick="openTab(event, 'contact')">
-              Contact
-            </button>
-          </div>
-
-          <div id="rules" class="tab-content active">
-            <ul>
-              <li>
-                <b>Vision - Mission:</b> Vision: St. Mary's Academy of Pasay
-                City is an Ignacian Marian School committed to providing quality
-                Catholic education for the development of persons, with a solid
-                foundation in Christian faith and readiness to serve the Church
-                and society. Mission: The institution aims to be an educational
-                establishment that efficiently and effectively: Produces
-                academically competent graduates, Provides client-focused
-                services, Adopts quality management systems, Advocates community
-                and Church services.
-              </li>
-              <li>
-                <b></b>
-              </li>
-            </ul>
-          </div>
-          <div id="courses" class="tab-content">
-            <h3>Available Strands</h3>
-            <ul>
-              <li>
-                Science, Technology, Engineering, and Mathematics (STEM) Strand.
-              </li>
-              <li>Humanities and Social Sciences (HUMSS) Strand.</li>
-              <li>Accountancy, Business, and Management (ABM) Strand.</li>
-            </ul>
-          </div>
-        </div>
-        <div id="contact" class="tab-content">
-          <h3>Contact Information</h3>
-          <p>
-            <b>Address:</b> 525 P. Burgos St., Pasay City, Philippines 1300.
-          </p>
-          <p><b>Phone:</b> +63 (2) 8831-6495 / +63923-822-3967.</p>
-          <p><b>Email:</b> sma@sma.edu.ph.</p>
-          <p>
-            <b>Facebook:</b>
-            <a
-              href="https://www.facebook.com/SMAP100/about_details/"
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
-          </p>
-        </div>
-
-        <a href="Pasay.html" class="back-link">Back to Gallery</a>
+        <p><b>Phone:</b> +63 (2) 8831-6495 / +63923-822-3967.</p>
+        <p><b>Email:</b> sma@sma.edu.ph.</p>
+        <p>
+          <b>Facebook:</b>
+          <a href="https://www.facebook.com/SMAP100/about_details/" target="_blank" rel="noopener noreferrer"></a>
+        </p>
       </div>
-    </main>
 
-    <script>
-      function openTab(evt, tabName) {
-        var i, tabContent, tabButtons;
-        tabContent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabContent.length; i++) {
-          tabContent[i].style.display = "none";
-        }
-        tabButtons = document.getElementsByClassName("tab-button");
-        for (i = 0; i < tabButtons.length; i++) {
-          tabButtons[i].className = tabButtons[i].className.replace(
-            " active",
-            ""
-          );
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
+      <a href="Pasay.html" class="back-link">Back to Gallery</a>
+    </div>
+  </main>
+
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabContent, tabButtons;
+      tabContent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].style.display = "none";
       }
-
-      // Image slider functionality
-      const images = document.querySelectorAll(".school-image img");
-      const imageNav = document.querySelector(".image-nav");
-      let currentImage = 0;
-
-      // Create navigation buttons
-      images.forEach((_, index) => {
-        const button = document.createElement("button");
-        button.addEventListener("click", () => showImage(index));
-        imageNav.appendChild(button);
-      });
-
-      const navButtons = imageNav.querySelectorAll("button");
-
-      function showImage(index) {
-        images[currentImage].classList.remove("active");
-        navButtons[currentImage].classList.remove("active");
-        currentImage = index;
-        images[currentImage].classList.add("active");
-        navButtons[currentImage].classList.add("active");
+      tabButtons = document.getElementsByClassName("tab-button");
+      for (i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].className = tabButtons[i].className.replace(
+          " active",
+          ""
+        );
       }
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
 
-      function nextImage() {
-        showImage((currentImage + 1) % images.length);
-      }
+    // Image slider functionality
+    const images = document.querySelectorAll(".school-image img");
+    const imageNav = document.querySelector(".image-nav");
+    let currentImage = 0;
 
-      // Initialize
-      showImage(0);
-      setInterval(nextImage, 5000); // Change image every 5 seconds
-    </script>
-  </body>
+    // Create navigation buttons
+    images.forEach((_, index) => {
+      const button = document.createElement("button");
+      button.addEventListener("click", () => showImage(index));
+      imageNav.appendChild(button);
+    });
+
+    const navButtons = imageNav.querySelectorAll("button");
+
+    function showImage(index) {
+      images[currentImage].classList.remove("active");
+      navButtons[currentImage].classList.remove("active");
+      currentImage = index;
+      images[currentImage].classList.add("active");
+      navButtons[currentImage].classList.add("active");
+    }
+
+    function nextImage() {
+      showImage((currentImage + 1) % images.length);
+    }
+
+    // Initialize
+    showImage(0);
+    setInterval(nextImage, 5000); // Change image every 5 seconds
+  </script>
+</body>
+
 </html>
