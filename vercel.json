@@ -6,7 +6,7 @@
         "dest": "/"
       },
       {
-        "src": "/index",
+        "src": "/src/index",
         "dest": "/"
       }
     ]
